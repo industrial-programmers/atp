@@ -19,7 +19,6 @@ create table test_case (
   test_descriptions         varchar(255),
   pass_criteria             varchar(255),
   post_conditions           varchar(255),
-  due_date                  timestamp,
   constraint ck_test_case_nature check (nature in (0,1)),
   constraint ck_test_case_mode check (mode in (0,1)),
   constraint pk_test_case primary key (id))

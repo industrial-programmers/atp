@@ -1,11 +1,10 @@
 package models;
 
-import java.util.*;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import play.db.ebean.*;
-import play.data.format.*;
-import play.data.validation.*;
+import play.data.validation.Constraints;
+import play.db.ebean.Model;
 
 @Entity 
 public class TestCase extends Model {
@@ -40,9 +39,6 @@ public class TestCase extends Model {
 	public String passCriteria;
 
 	public String postConditions;
-
-	@Formats.DateTime(pattern="dd/MM/yyyy")
-	public Date dueDate = new Date();
 
 	public static Finder<Long, TestCase> find = new Finder<Long, TestCase>(Long.class, TestCase.class); 
 }
